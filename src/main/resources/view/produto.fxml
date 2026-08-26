@@ -20,17 +20,17 @@
                 <VBox spacing="12" style="-fx-padding: 0 20 20 20;">
                     <children>
                         <Label style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 11px;" text="Nome" />
-                        <TextField style="-fx-background-color: FFFFFF;" />
+                        <TextField fx:id="campoNome" style="-fx-background-color: FFFFFF;" />
 
                         <Label style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 11px;" text="Preço" />
-                        <TextField style="-fx-background-color: FFFFFF;" />
+                        <TextField fx:id="campoPreco" style="-fx-background-color: FFFFFF;" />
 
                         <Label style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 11px;" text="Quantidade em estoque" />
-                        <TextField style="-fx-background-color: FFFFFF;" />
+                        <TextField fx:id="campoQuantidadeEstoque" style="-fx-background-color: FFFFFF;" />
 
                         <HBox alignment="CENTER_RIGHT" style="-fx-padding: 8 0 0 0;" VBox.vgrow="NEVER">
                             <children>
-                                <Button mnemonicParsing="false" style="-fx-background-color: #0EA5C4; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 40; -fx-font-weight: bold;" text="Salvar" />
+                                <Button onAction="#aoSalvar" mnemonicParsing="false" style="-fx-background-color: #0EA5C4; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 8 40; -fx-font-weight: bold;" text="Salvar" />
                             </children>
                         </HBox>
                     </children>
