@@ -1,15 +1,20 @@
 package org.example;
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+
 public class Main extends Application {
     @Override
-    public void start(Stage palco) {
-        Label texto = new Label("Olá, JavaFX no IntelliJ IDEA!");
-        Scene cena = new Scene(texto, 400, 300);
-        palco.setScene(cena);
-        palco.setTitle("Sistema de Vendas - ADS PUC Goiás");
+    public void start(Stage palco) throws IOException {
+        Parent raiz = FXMLLoader.load(
+                getClass().getResource("/view/produto.fxml"));
+        palco.setScene(new Scene(raiz, 480, 400));
+        palco.setTitle("Sistema de Vendas");
         palco.show();
     }
 
